@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p.cc {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>一级标题</h1>
+    <h6>六级标题</h6>
+    <a href="https://www.baidu.com" target="_self">点击跳转:当前选项卡</a>
+    <a href="https://www.baidu.com" target="_blank">点击跳转:新打开一个选项卡</a>
+    <a href="mailto:livesxu@163.com">联系我们：跳转邮件</a>
+    <a href="https://www.baidu.com"><img src="icon.png" style="width: 50px;height: 50px"></a>
+    <img src="icon.png">
+    <img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png">
+    <p class="cc">这是换行</p>
+    <br/>
+    <p class="cc">有序列表：Ordered list</p>
+    <ol>
+        <li>选项1</li>
+        <li>选项2</li>
+    </ol>
+    <p class="cc">无序列表：Unordered list</p>
+    <ul>
+        <li>选项1</li>
+        <li>选项2</li>
+    </ul>
+    <p class="cc">自定义列表：Definition list</p>
+    <dl>
+        <dt>这是一项</dt>
+        <dd>这是一项01</dd>
+        <dd>这是一项02</dd>
+        <dt>这是二项</dt>
+        <dd>这是二项01</dd>
+        <dd>这是二项02</dd>
+    </dl>
+    <p class="cc">这是一个表格</p>
+    <table border="1">
+        <tr>
+            <th>cell1 Header</th>
+            <th>cell2 Header</th>
+        </tr>
+        <tr>
+            <td>row1,cell1</td>
+            <td>row1,cell2</td>
+        </tr>
+        <tr>
+            <td>row2,cell1</td>
+            <td>row2,cell2</td>
+        </tr>
+    </table>
+    <br/>
+<!--    div：每个div占满一行，块级标签;span：文本信息行内展示，行内标签，内联标签-->
+    <div style="width: 100px;height: 100px;background-color: aquamarine"></div>
+
+    <p class="cc">表单</p>
+<!--    action:指定表单提交数据的url
+    method:指定提交方式 一共7种，2种常用
+        get:
+            1.请求参数会在地址栏中显示.会封装在请求行中
+            2.请求参数的长度是有限制的
+            3.不太安全
+        post:
+            1.请求参数不会在地址栏中显示.会封装在请求体中
+            2.请求参数的长度没有限制
+            3.较为安全
+
+    type:
+-->
+    <form action="#" method="get">
+        用户名:<input type="text" name="username"><br>
+        密码:<input type="password" name="password"><br>
+        性别:<input type="radio" name="sex" value="man">男性
+        <input type="radio" name="sex" value="woman">女性
+        <input type="radio" name="sex" value="none">保密<br>
+        爱好:<input type="checkbox" name="like" value="play">玩
+        <input type="checkbox" name="like" value="walk">走路
+        <input type="checkbox" name="like" value="work">工作
+        <input type="checkbox" name="like" value="study">学习<br>
+        头像:<input type="file" name="header"><br>
+        <input type="hidden" name="token" value="123456">
+        <input type="button" name="button" value="一个按钮"><br>
+        取色器:<input type="color" name="colorselect"><br>
+        生日:<input type="date" name="bir"><br>
+        准确的生日:<input type="datetime-local" name="bir_time"><br>
+        邮箱:<input type="email" name="email"><br>
+        年龄:<input type="number" name="age"><br>
+        省份:<select name="province">
+            <option value="">——请选择——</option>
+            <option value="beijing">北京</option>
+            <option value="shanghai">上海</option>
+            <option value="anhui">安徽</option>
+            </select><br>
+        自我描述:<textarea name="desc" rows="5" cols="20"></textarea><br>
+        <input type="image" src="register.png"><br>
+        <input type="submit" value="登录">
+
+    </form>
+
+
+</body>
+</html>
