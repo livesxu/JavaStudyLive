@@ -1,0 +1,92 @@
+/*让所有元素默认内外边距都是0*/
+/*box-sizing: border-box; 设置盒子属性，让width和height就是最终盒子的大小*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body.bg {
+    background: url("bg.jpeg") no-repeat center;
+    background-size: 100%;
+}
+
+div.div_main {
+    margin: 50px auto auto;
+    background: white;
+    border: #eeeeee 6px solid;
+    width: 60%;
+    height: 500px;
+}
+
+#div_left {
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#div_center {
+    margin-top: 20px;
+    float: left;
+    width: 50%;
+}
+
+#div_right {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+p.user_title {
+    color: yellow;
+    font-size: 24px;
+}
+
+p.user_subtitle {
+    color: #666666;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+p.have_link {
+    font-size: 10px;
+}
+a.link_login {
+    font-size: 10px;
+}
+a.link_login:link {
+    font-size: 10px;
+    color: red;
+}
+
+tr {
+    height: 50px;
+}
+
+td.td_left {
+    width: 100px;
+    text-align: right;
+}
+
+td.td_right {
+    padding-left: 10px;
+}
+
+input[type="text"],input[type="password"],input[type="email"],input[type="date"] {
+    width: 200px;
+    height: 30px;
+    padding-left: 5px;
+    border: #666666 1px solid;
+    border-radius: 5px;
+}
+
+#check_input {
+    width: 100px;
+}
+
+#check_img {
+    /*让验证码竖直居中*/
+    vertical-align: middle;
+    width: 80px;
+    height: 30px;
+}
