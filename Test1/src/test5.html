@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>延时跳转</title>
+
+    <style>
+        h1 {
+            background: blueviolet;
+            text-align: center;
+            /*display: flex;*/
+            /*justify-content: center;*/
+        }
+        span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1><span id="sp">5</span>秒后跳转百度</h1>
+
+<script>
+    let time = setInterval(funI,1000);
+    function funI() {
+        let sp = document.getElementById("sp");
+        let s = sp.innerText;
+        let t = parseInt(s);
+        t--;
+        sp.innerText = t.toString();
+
+        if (t <= 0) {
+            clearInterval(time);
+            location.href = "https:www.baidu.com";
+        }
+    }
+</script>
+</body>
+</html>

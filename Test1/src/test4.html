@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+</head>
+<body>
+    <img id="img" src="register.png">
+
+<script>
+    let imgs = ["check.png","icon.png","register.png"];
+    let t = 0;
+    setInterval(funI,3000);
+    function funI() {
+        let img = document.getElementById("img");
+        img.src = imgs[t%3];
+        t ++;
+    }
+</script>
+</body>
+</html>
