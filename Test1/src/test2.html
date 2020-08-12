@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="test2to.js"></script>
+    <script>
+        // alert("Hello world");
+        //匹配包含至少大写字母，小写字母，数字的两种以上组合
+        // let re = new RegExp("^(?![0-9]+$)(?![a-z]+$)(?![A-Z]+$)[a-z0-9A-Z]{8,}$");
+        //匹配包含至少大写字母，小写字母，数字，特殊符号的两种以上组合
+        let re = new RegExp("^(?![0-9]+$)(?![a-z]+$)(?![A-Z]+$)(?![\\W]+$)[a-z0-9A-Z\\W]{8,}$");
+        let t = re.test(".............p");
+        // eval("alert(t)"); //可直接执行子串
+
+        // let p = NaN;
+        // alert(p == NaN);//false
+        // alert(isNaN(p));//true
+
+        // let x = "123xyz";
+        // alert(x * 5);
+        // alert(parseInt(x) *5);//parseInt可转换任意子串初始位置带数字
+
+        // let y = encodeURI("徐中则");
+        // let z = decodeURI(y);
+        // alert(y);
+        // alert(z);
+
+        let y0 = encodeURI("http://www.baidu.com/wd=徐中则&x=a");//url编码 编码字符有限
+        let z0 = decodeURI(y0);//url解码
+        let y = encodeURIComponent("http://www.baidu.com/wd=徐中则&x=a");//编码字符更多更全
+        let z = decodeURIComponent(y);
+        alert(y0);
+        alert(z0);
+        alert(y);
+        alert(z);
+
+    </script>
+</head>
+<body>
+    <input type="text">
+
+</body>
+</html>
