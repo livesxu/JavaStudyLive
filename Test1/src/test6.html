@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>增删页面示例</title>
+
+    <style>
+        #inputs {
+            margin-top: 200px;
+            display: flex;
+            justify-content: center;
+        }
+        h4 {
+            text-align: center;
+        }
+        table {
+            /*有让其居中的效果*/
+            margin: auto;
+        }
+        th,td {
+            width: 100px;
+            height: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="inputs">
+        <input type="text" name="number">
+        <input type="text" name="name">
+        <select name="sex">
+            <option value="">---请选择---</option>
+            <option value="man">男</option>
+            <option value="woman">女</option>
+            <option value="none">保密</option>
+        </select>
+        <input id="submit" type="submit" value="添加">
+    </div>
+    <br/>
+    <h4>学生信息表</h4>
+    <table id="table">
+        <tr>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>天天</td>
+            <td>女</td>
+<!--            给a加一个href="javascript:void(0);"可以让其具备点击展示效果但是没有点击事件-->
+            <td><a href="javascript:void(0);" onclick="delAction(this);">删除</a></td>
+        </tr>
+    </table>
+
+    <script>
+
+        let submit = document.getElementById("submit");
+        submit.onclick = function () {
+
+            let number = document.getElementsByName("number")[0];
+            let name = document.getElementsByName("name")[0];
+            let sex = document.getElementsByName("sex")[0];
+            let td1 = document.createElement("td");
+            td1.innerText = number.value;
+            let td2 = document.createElement("td");
+            td2.innerText = name.value;
+            let td3 = document.createElement("td");
+            let sexStr;
+            switch (sex.value) {
+                case "man":
+                    sexStr = "男";
+                    break;
+                case "woman":
+                    sexStr = "女";
+                    break;
+                case "none":
+                    sexStr = "保密";
+                    break;
+                default:
+                    eval("alert(\"请选择性别\")");
+                    return;
+                    break;
+            }
+            td3.innerText = sexStr;
+
+            let td4 = document.createElement("td");
+            let a = document.createElement("a");
+            a.setAttribute("href","javascript:void(0);");
+            a.setAttribute("onclick","delAction(this);");
+            a.innerText = "删除";
+            td4.appendChild(a);
+
+
+            let tr = document.createElement("tr");
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tr.appendChild(td4);
+
+            let table = document.getElementById("table");
+            table.appendChild(tr);
+        };
+
+        function delAction(obj) {
+            let tr = obj.parentNode.parentNode;
+            let table = tr.parentNode;
+            table.removeChild(tr);
+        }
+    </script>
+
+</body>
+</html>
