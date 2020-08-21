@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录demo</title>
+
+    <style>
+        #loginDiv {
+            width: 300px;
+            height: 100px;
+            margin: 100px auto auto;
+        }
+        tr td p {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="loginDiv">
+        <form action="/test1/login" method="post">
+            <table>
+                <tr>
+                    <td><p>用户名:</p></td>
+                    <td><input type="text" placeholder="请输入用户名" name="username"></td>
+                </tr>
+                <tr>
+                    <td><p>密码:</p></td>
+                    <td><input type="password" placeholder="请输入密码" name="password"></td>
+                </tr>
+                <tr><td colspan="2" align="center"><input type="submit" value="登录"></td></tr>
+            </table>
+
+        </form>
+    </div>
+
+</body>
+</html>

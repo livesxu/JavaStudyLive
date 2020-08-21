@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQueryDemo1</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+
+    <style>
+        div {
+            margin: 10px auto;
+            text-align: center;
+        }
+        table {
+            display: flex;
+            justify-content: center;
+        }
+        tr {
+            height: 30px;
+        }
+        th,td {
+            text-align: center;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>学生操作管理</div>
+    <div>
+        <input type="text" placeholder="请输入姓名" id="name">
+        <input type="number" placeholder="请输入分数" id="score">
+        <select id="sex">
+            <option value="">--请选择性别--</option>
+            <option value="male">男</option>
+            <option value="female">女</option>
+            <option value="none">保密</option>
+        </select>
+        <button id="add_btn">添加</button>
+    </div>
+    <table>
+        <tr>
+            <th><input type="checkbox"></th>
+            <th>姓名</th>
+            <th>分数</th>
+            <th>性别</th>
+            <th>操作</th>
+        </tr>
+    </table>
+    <div>
+        <button id="selAll">全选</button>
+        <button id="selAllNo">全不选</button>
+    </div>
+<script>
+    $(document).ready(function(){
+
+        //添加
+        $("#add_btn").click(function () {
+            let name = $("#name").val();
+            let score = $("#score").val();
+            let sex = $("#sex").val();
+
+            switch (sex) {
+                case "":
+                    eval("alert(\"请选择性别\")");
+                    return;
+                    break;
+                case "male":
+                    sex = "男";
+                    break;
+                case "female":
+                    sex = "女";
+                    break;
+                case "none":
+                    sex = "保密";
+                    break;
+                default:
+                    sex = "";
+                    break;
+            }
+
+            $("table").append("<tr>" +
+                "<td><input type='checkbox'></td>" +
+                "<td>" + name + "</td>" +
+                "<td>" + score + "</td>" +
+                "<td>" + sex + "</td>" +
+                "<td><a class='delete' href='javascript:void(0);'>删除</a></td>" +
+                "</tr>");
+
+            $("a.delete").click(function () {
+
+                //1. this.parent() ?? 为什么不能用？ ->  使用$(this)
+                // let tr = this.parentNode.parentNode;
+                let tr = $(this).parent().parent();
+                tr.remove();
+            });
+        });
+
+        //全选
+        $("#selAll").click(function () {
+
+            $("tr td input[type='checkbox']").attr("checked",true);
+            $("tr th input[type='checkbox']").attr("checked",true);
+
+            //2.this.css 为什么报错？？ ->  使用$(this)
+            $(this).css({"color":"blue","border":"red 1px solid"});
+        });
+        //全不选
+        $("#selAllNo").click(function () {
+
+            $("tr td input[type='checkbox']").attr("checked",false);
+            $("tr th input[type='checkbox']").attr("checked",false);
+        });
+
+        //顶部勾选
+        $("tr th input[type='checkbox']").click(function () {
+
+            let checked = this.checked;
+            $("tr td input[type='checkbox']").attr("checked",this.checked);
+        });
+
+    });
+
+</script>
+</body>
+</html>
