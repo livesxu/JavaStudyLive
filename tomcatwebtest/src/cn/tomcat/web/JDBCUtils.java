@@ -23,12 +23,12 @@ public class JDBCUtils {
 
         Properties properties = new Properties();
 
-        //获取当前类加载器 ??? 为什么这个相对路径错误？？？
-//        ClassLoader classLoader = JDBCUtils.class.getClassLoader();
-//        URL url1 = classLoader.getResource("jdbc.properties");
+
+        ClassLoader classLoader = JDBCUtils.class.getClassLoader();
+        InputStream inputStream = classLoader.getResourceAsStream("jdbctest.properties");
 
         try {
-            properties.load(new FileInputStream("/Users/xuxiaobo/Desktop/JavaStudyLive/tomcatwebtest/src/jdbc.properties"));
+            properties.load(inputStream);
         } catch (IOException e) {
 
         }
