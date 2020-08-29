@@ -22,5 +22,10 @@
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.5.57" level="application_server_libraries" />
     <orderEntry type="library" name="mysql-connector-java-8.0.21" level="project" />
     <orderEntry type="library" name="druid-1.1.23" level="project" />
+    <orderEntry type="library" name="com.springsource.org.apache.commons.logging-1.1.1" level="project" />
+    <orderEntry type="library" name="spring-beans-5.2.8.RELEASE" level="project" />
+    <orderEntry type="library" name="spring-core-5.2.8.RELEASE" level="project" />
+    <orderEntry type="library" name="spring-jdbc-5.2.8.RELEASE" level="project" />
+    <orderEntry type="library" name="spring-tx-5.2.8.RELEASE" level="project" />
   </component>
 </module>
