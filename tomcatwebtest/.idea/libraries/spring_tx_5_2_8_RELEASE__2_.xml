@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="spring-tx-5.2.8.RELEASE (2)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/spring-tx-5.2.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/mysql-connector-java-8.0.21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/com.springsource.org.apache.commons.logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/spring-jdbc-5.2.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/spring-beans-5.2.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/druid-1.1.23.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/spring-core-5.2.8.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

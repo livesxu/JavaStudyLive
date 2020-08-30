@@ -1,5 +1,6 @@
 package cn.tomcat.web;
 
+import javax.imageio.ImageIO;
 import javax.jws.WebService;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -62,7 +63,7 @@ public class ServletDemo2 extends HttpServlet {
 //        获取请求消息体
         System.out.println("do post....");
 
-//        获取字节流
+//        获取字符流
         BufferedReader bufferedReader = req.getReader();
 
 //        读取数据
@@ -71,5 +72,6 @@ public class ServletDemo2 extends HttpServlet {
 
             System.out.println(line);
         }
+
     }
 }
