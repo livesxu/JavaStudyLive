@@ -14,6 +14,7 @@
     <title>首页</title>
   </head>
   <body>
+  ${pageContext.request.getParameter("name")}
 
   <%! String xbody = "boboxu";
   %>

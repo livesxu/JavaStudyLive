@@ -14,10 +14,10 @@
     <title>首页</title>
   </head>
   <body>
+  ${pageContext.request.getParameter("name")}
 
   <%! String xbody = "boboxu";
   %>
-  ${empty requestScope.xbody}
 <%--动态获取虚拟目录--%>
 ${pageContext.request.contextPath}
   <form action="${pageContext.request.contextPath}/login" method="post"></form>
