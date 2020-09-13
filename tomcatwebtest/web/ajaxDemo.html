@@ -27,7 +27,8 @@
             // });
 
             $.post("http://localhost:8080/test1/ajax_demo",{"name":"bobo"},function (data) {
-                alert(data);
+                // alert(data);
+                $("#top").text(data);
             });
         });
     });
