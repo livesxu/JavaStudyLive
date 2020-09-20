@@ -6,20 +6,36 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @RestController
-@EnableAutoConfiguration
+//@EnableAutoConfiguration
 public class HelloController {
 
     @RequestMapping("hello")
     @ResponseBody
     public String hello(){
 
+        int t = 10/0;
         return "Hello,spring boot test one!";
     }
 
-    public static void main(String[] args) {
+    @RequestMapping("helloLogin")
+    @ResponseBody//响应体，自动返回json格式字符串
+    public Map<String,Object> login(String username,String password) {
 
-        SpringApplication.run(HelloController.class,args);
+        Map<String,Object> map = new HashMap<>();
+
+        map.put("name","bobo");
+        map.put("password","123");
+
+        return map;
     }
+
+//    public static void main(String[] args) {
+//
+//        SpringApplication.run(HelloController.class,args);
+//    }
 
 }
