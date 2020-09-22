@@ -3,7 +3,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 
 @EnableAutoConfiguration
-@ComponentScan(basePackages = {"user","web.controller"})
+@ComponentScan(basePackages = {"user","web"})
 public class App {
 
     public static void main(String[] args) {

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 import java.util.Map;
 
-@RestController
+@RestController//用于写API，给外部提供数据，一般返回json数据
 //@EnableAutoConfiguration
 public class HelloController {
 
