@@ -1,0 +1,15 @@
+#改端口8888
+server:
+  port: 8888
+logging:
+  level:
+#    org.springframework: debug
+    com.livesxu: debug
+mybatis:
+  configuration:
+#    开启驼峰
+    map-underscore-to-camel-case: true
+#  让mybatis自动扫描到自定义POJO
+  type-aliases-package: com.livesxu.pojo
+#  配置mapper **:任意多级目录
+  mapper-locations: classpath:mappers/**/*.xml
