@@ -11,4 +11,8 @@
     </select>
 <!--    <resultMap id="" type=""-->
 <!--    resultMap=""-->
+
+    <select id="findWithId" resultType="com.livesxu.pojo.MyPojo">
+        select * from worker where id=#{id}
+    </select>
 </mapper>

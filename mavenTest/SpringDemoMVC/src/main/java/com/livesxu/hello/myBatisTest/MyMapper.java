@@ -10,4 +10,6 @@ public interface MyMapper {
     List<MyPojo> findAll();
 
     MyPojo findOne();
+
+    MyPojo findWithId(int id);
 }
